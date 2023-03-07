@@ -29,7 +29,8 @@
             text-align: center;
             border-radius: 20px;
         }
-        #click{
+
+        #click {
             margin: 20px;
             padding: 20px;
             border: 3px solid black;
@@ -47,7 +48,13 @@
     <button id="click" onclick="changetext()">
         click me to change the text
     </button>
+
+    <input type="text" id="name">
+    <button onclick="myFunction()">Try it</button>
+    <div id="demo"></div>
+
     <script>
+        console.log(name)
         let now = new Date();
         let currentDate = new Date().toJSON().slice(0, 10);
         var date = document.getElementById("date");
@@ -55,10 +62,8 @@
         date.innerHTML = currentDate;
         setInterval(updatetime, 1000);
         function updatetime() {
-            time.innerHTML = new Date().toJSON().slice(11, 20);
+            time.innerHTML = new Date().toJSON().slice(11, 19);
         }
-        
-
     </script>
     <script>
         function changetext() {
@@ -66,6 +71,12 @@
             document.getElementById("click").innerHTML = "you clicked me and i changed the text";
         }
     </script>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("name").value;
+          document.getElementById("demo").innerHTML =  "hello " + x + " ,Welcome to my website";
+        }
+        </script>
 </body>
 
 </html>
