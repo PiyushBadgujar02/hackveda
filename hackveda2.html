@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java-Script 2</title>
+    <style>
+        input{
+            width: 33%;
+            border: 3px solid orange;
+            height: 90px;
+            text-align: center;
+            margin-right: 20px;
+            font-size: 30px;
+        }
+        select{
+            background-color: red;
+            width: 20%;
+            color: white;
+            border: 3px solid black;
+            height: 90px;
+            margin: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        #ans{
+            background-color: aquamarine;
+            text-align: center;
+            height: 100px;
+            font-size: 75px;
+            margin: 20px;
+            border: 3px solid black;
+            
+        }
+        .relational{
+            height: 90px;
+    text-align: center;
+    margin-right: 20px;
+    font-size: 30px;
+    background-color: wheat;
+        }
+        #new{
+            background-color: aquamarine;
+            text-align: center;
+            height: 100px;
+            font-size: 75px;
+            margin: 20px;
+            border: 3px solid black;
+            
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="relational">Arithmetic and Assignment Operators</div>
+        <input type="number" id="number1" placeholder="number1" required>
+        <input type="number" id="number2" placeholder="number2"required>
+        <select name="operation" id="operation" onchange="myFunction()" required>
+            <option value=" ">Select Operation</option>
+            <option value="+">addition</option>
+            <option value="-">substraction</option>
+            <option value="*">multiplication</option>
+            <option value="/">division</option>
+        </select>
+    </div>
+    <div id="ans"></div>
+    <script>
+        function myFunction() {
+            var num1 = Number(document.getElementById("number1").value);
+            var num2 = Number(document.getElementById("number2").value);
+            var x = document.getElementById("operation").value;
+            if (x=="-"){
+                document.getElementById("ans").innerHTML =num1-num2;
+            }
+            if (x=="+"){
+                document.getElementById("ans").innerHTML =num1+num2;
+            }
+            if (x=="/"){
+                document.getElementById("ans").innerHTML =num1/num2;
+            }
+            if (x=="*"){
+                document.getElementById("ans").innerHTML =num1*num2;
+            }
+        }
+
+    </script>
+
+<div class="box">
+    <div class="relational">Comparison Operators</div>
+    <input type="number" id="numb1" placeholder="number1" required>
+    <input type="number" id="numb2" placeholder="number2"required>
+    <select name="operation" id="op" onchange="newFunction()" required>
+        <option value=" ">Select Comparison</option>
+        <option value="==">equal to</option>
+        <option value="===">equal value and equal type</option>
+        <option value="!=">not equal</option>
+        <option value="!==">not equal value or not equal type</option>
+        <option value=">">greater than</option>
+        <option value='<'>less than</option>
+        <option value=">=">greater than or equal to</option>
+        <option value="<=">less than or equal to</option>
+    </select>
+</div>
+<div id="new"></div>
+<script>
+    function newFunction() {
+        var num1 = Number(document.getElementById("numb1").value);
+        var num2 = Number(document.getElementById("numb2").value);
+        var x = document.getElementById("op").value;
+        if (x=="=="){
+            document.getElementById("new").innerHTML =num1==num2;
+        }
+        if (x=="==="){
+            document.getElementById("new").innerHTML =(num1===num2);
+            console.log(num1===num2)
+        }
+        if (x=="!="){
+            document.getElementById("new").innerHTML =(num1 != num2);
+        }
+        if (x=="!=="){
+            document.getElementById("new").innerHTML =(num1 !== num2);
+        }
+        if (x==">"){
+            document.getElementById("new").innerHTML =(num1 > num2);
+        }
+        if (x=="<"){
+            document.getElementById("new").innerHTML =(num1 < num2);
+        }
+        if (x==">="){
+            document.getElementById("new").innerHTML =(num1 >= num2);
+        }
+        if (x=="<="){
+            document.getElementById("new").innerHTML =(num1 <= num2);
+        }
+    }
+
+</script>
+
+
+</body>
+
+</html>
